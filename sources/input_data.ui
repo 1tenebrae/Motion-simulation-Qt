@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>input_data</class>
+ <widget class="QDialog" name="input_data">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1106</width>
+    <height>708</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background: rgb(232, 241, 255);
+</string>
+  </property>
+  <widget class="QTextBrowser" name="textBrowser">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>1081</width>
+     <height>671</height>
+    </rect>
+   </property>
+   <property name="html">
+    <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;Входные данные.&lt;/span&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;&lt;br /&gt;H - высота моря. Высота, на которую лодке необходимо подняться. Из-за того, что всплытие лодки начинается с (0;0), то это высота, которую лодка пройдёт до всплытия на поверхность. Единицы измерения метры.&lt;br /&gt;V - скорость подлодки. По условию задачи лодка движется с постоянной горизонтальной скоростью. Единицы измерения - км/ч;&lt;br /&gt;p0 - плотность воды. Плотность морской воды колеблется в пределах от 1020 до 1030 кг/м³ и зависит от температуры и солености. При солености, превышающей 24 ‰, температура максимальной плотности становится ниже температуры замерзания — при охлаждении морская вода всегда сжимается, и плотность её растет. В программе это не учитывается и поэтому взята постоянная величина. Значение по умолчанию - плотность Северного Ледовитого океана - 1024 кг/м³;&lt;br /&gt;p1 - средняя плотность подводной лодки. В реальности средняя плотность подводной лодки - это переменная величина. Если средняя плотность субмарины равна плотности морской воды, то она плавает на одной и той же глубине по прямой. Лодка может набрать в балластные цистерны воду, чтобы опуститься на дно. Тогда её средняя плотность будет больше плотности воды. Если же выдавить сжатым воздухом воду из балластных цистерн, подводная лодка всплывет. Чем меньше средняя плотность подводной лодки, тем больше сила, выталкивающая подлодку на поверхность. При постановке задачи была взята ситуация, при которой средняя плотности подводной лодки является постоянной величиной, при том условии, что она всегда меньше плотности воды, чтобы лодка всплывала. Единицы измерения - кг/м³.&lt;br /&gt;k - коэффициент сопротивления формы. Осесимметричное каплевидное тело имеет коэффициент сопротивления 0,04. Это и установлено значением по умолчанию. Чем больше коэффициент сопротивления, тем большая сила будет мешать всплыть лодке. Впоследствии потребуется больше значений при постоянной точности до достижения установленной высоты. Из-за этого увеличится время построения графика за счёт увеличения числа точек. Отсюда следует, что увеличивать коэффициент с осторожностью. Шар имеет коэффициент сопротивления 0,4. Это и установлено верхней границей допустимых значений.&lt;br /&gt;&lt;/span&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;Постоянные величины.&lt;/span&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;&lt;br /&gt;g - ускорение свободного падения, равно 9,8 м/c&lt;/span&gt;&lt;span style=&quot; font-size:14pt; vertical-align:super;&quot;&gt;2&lt;/span&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;.&lt;br /&gt;h - шаг времени t, равный 0,01. &lt;br /&gt;h_for_runge_kutta - шаг интегрирования для численного метода решения дифференциальных уравнений, равный 0,001. &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,655 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1297</width>
+    <height>775</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <weight>75</weight>
+    <bold>true</bold>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background: rgb(232, 241, 255);
+</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true">background: rgb(232, 241, 255);</string>
+   </property>
+   <widget class="QCustomPlot" name="widget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>350</x>
+      <y>0</y>
+      <width>941</width>
+      <height>681</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Tahoma</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background: rgb(232, 241, 255);</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>670</y>
+      <width>311</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Tahoma</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QRadioButton" name="radioButton">
+       <property name="font">
+        <font>
+         <family>Tahoma</family>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>без сопротивления</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="radioButton_2">
+       <property name="font">
+        <font>
+         <family>Tahoma</family>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>с сопротивлением</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>0</y>
+      <width>301</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QRadioButton" name="radioButton_3">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="font">
+        <font>
+         <family>Tahoma</family>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="mouseTracking">
+        <bool>true</bool>
+       </property>
+       <property name="text">
+        <string>ввод данных вручную</string>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="checked">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="radioButton_4">
+       <property name="font">
+        <font>
+         <family>Tahoma</family>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>использовать данные по умолчанию</string>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>390</y>
+      <width>331</width>
+      <height>171</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Tahoma</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background: rgb(204, 224, 255);</string>
+    </property>
+    <property name="title">
+     <string>Вывод данных</string>
+    </property>
+    <widget class="QLabel" name="output_L">
+     <property name="geometry">
+      <rect>
+       <x>210</x>
+       <y>60</y>
+       <width>111</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Tahoma</family>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="output_number_of_points">
+     <property name="geometry">
+      <rect>
+       <x>210</x>
+       <y>140</y>
+       <width>111</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="output_t">
+     <property name="geometry">
+      <rect>
+       <x>210</x>
+       <y>26</y>
+       <width>111</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Tahoma</family>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QWidget" name="layoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>201</width>
+       <height>141</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <widget class="QLabel" name="label_7">
+        <property name="font">
+         <font>
+          <family>Tahoma</family>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Время всплытия:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_8">
+        <property name="font">
+         <font>
+          <family>Tahoma</family>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Пройденное расстояние:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_6">
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Координаты конечной точки:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_10">
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Количество точек графика:</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QWidget" name="">
+     <property name="geometry">
+      <rect>
+       <x>210</x>
+       <y>100</y>
+       <width>111</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <widget class="QLabel" name="output_l">
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="output_h">
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>90</y>
+      <width>331</width>
+      <height>281</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Tahoma</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background: rgb(204, 224, 255);</string>
+    </property>
+    <property name="title">
+     <string>Ввод данных</string>
+    </property>
+    <widget class="QWidget" name="layoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>201</width>
+       <height>251</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_3">
+      <item>
+       <widget class="QLabel" name="label">
+        <property name="font">
+         <font>
+          <family>Tahoma</family>
+          <pointsize>10</pointsize>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>H высота, метров</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_2">
+        <property name="font">
+         <font>
+          <family>Tahoma</family>
+          <pointsize>10</pointsize>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>V скорость, км/ч</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_3">
+        <property name="font">
+         <font>
+          <family>Tahoma</family>
+          <pointsize>10</pointsize>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>p0 плотность воды, кг/м3</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_4">
+        <property name="font">
+         <font>
+          <family>Tahoma</family>
+          <pointsize>10</pointsize>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>p1 плотность лодки, кг/м3</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_5">
+        <property name="font">
+         <font>
+          <family>Tahoma</family>
+          <pointsize>10</pointsize>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>k коэффициент сопротивления</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QDoubleSpinBox" name="doubleSpinBox_p1">
+     <property name="geometry">
+      <rect>
+       <x>210</x>
+       <y>190</y>
+       <width>101</width>
+       <height>18</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background: rgb(255, 255, 255);</string>
+     </property>
+     <property name="minimum">
+      <double>1.000000000000000</double>
+     </property>
+     <property name="maximum">
+      <double>1030.000000000000000</double>
+     </property>
+     <property name="value">
+      <double>800.000000000000000</double>
+     </property>
+    </widget>
+    <widget class="QDoubleSpinBox" name="doubleSpinBox_p0">
+     <property name="geometry">
+      <rect>
+       <x>210</x>
+       <y>140</y>
+       <width>101</width>
+       <height>18</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background: rgb(255, 255, 255);</string>
+     </property>
+     <property name="minimum">
+      <double>1020.000000000000000</double>
+     </property>
+     <property name="maximum">
+      <double>1030.000000000000000</double>
+     </property>
+    </widget>
+    <widget class="QDoubleSpinBox" name="doubleSpinBox_V">
+     <property name="geometry">
+      <rect>
+       <x>210</x>
+       <y>90</y>
+       <width>101</width>
+       <height>18</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background: rgb(255, 255, 255);</string>
+     </property>
+     <property name="minimum">
+      <double>1.000000000000000</double>
+     </property>
+     <property name="maximum">
+      <double>90.000000000000000</double>
+     </property>
+     <property name="value">
+      <double>45.000000000000000</double>
+     </property>
+    </widget>
+    <widget class="QDoubleSpinBox" name="doubleSpinBox_H">
+     <property name="geometry">
+      <rect>
+       <x>210</x>
+       <y>40</y>
+       <width>101</width>
+       <height>18</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background: rgb(255, 255, 255);</string>
+     </property>
+     <property name="maximum">
+      <double>10000.000000000000000</double>
+     </property>
+     <property name="value">
+      <double>1000.000000000000000</double>
+     </property>
+    </widget>
+    <widget class="QDoubleSpinBox" name="doubleSpinBox_coeff">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>210</x>
+       <y>240</y>
+       <width>101</width>
+       <height>18</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background: rgb(255, 255, 255);</string>
+     </property>
+     <property name="minimum">
+      <double>0.010000000000000</double>
+     </property>
+     <property name="maximum">
+      <double>0.400000000000000</double>
+     </property>
+     <property name="singleStep">
+      <double>0.010000000000000</double>
+     </property>
+     <property name="stepType">
+      <enum>QAbstractSpinBox::AdaptiveDecimalStepType</enum>
+     </property>
+     <property name="value">
+      <double>0.040000000000000</double>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>570</y>
+      <width>311</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background: rgb(204, 224, 255);</string>
+    </property>
+    <property name="text">
+     <string>Построить траекторию всплытия</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_stop">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>630</y>
+      <width>311</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Tahoma</family>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background: rgb(204, 224, 255);</string>
+    </property>
+    <property name="text">
+     <string>Очистить график</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1297</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="styleSheet">
+     <string notr="true">background-color:  rgb(204, 224, 255);</string>
+    </property>
+    <property name="title">
+     <string>О программе</string>
+    </property>
+    <addaction name="action"/>
+    <addaction name="separator"/>
+    <addaction name="action_4"/>
+    <addaction name="separator"/>
+   </widget>
+   <addaction name="menu"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar">
+   <property name="font">
+    <font>
+     <family>Tahoma</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background: rgb(176, 208, 255);</string>
+   </property>
+  </widget>
+  <action name="action">
+   <property name="text">
+    <string>Постановка задачи</string>
+   </property>
+  </action>
+  <action name="action_4">
+   <property name="text">
+    <string>О формате входных данных</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QCustomPlot</class>
+   <extends>QWidget</extends>
+   <header>qcustomplot.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
